@@ -1,12 +1,7 @@
 var gulp = require('gulp'),
 	connect = require('gulp-connect');
 
-gulp.src('client/js/**/*.js') 
-	.pipe(minify())
-	.pipe(gulp.dest('build'));
-
-
-
+gulp.src(incorrect_code());
 
 gulp.task('webserver', function() {
 	connect.server({
