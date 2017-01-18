@@ -1,11 +1,12 @@
 var gulp = require('gulp'),
 	connect = require('gulp-connect');
 
-glup.src('./client/templates/*.jade')
-	.pipe(jade())
-	.pipe(gulp.dest('./build/templates'))
+gulp.src('client/js/**/*.js') 
 	.pipe(minify())
-	.pipe(gulp.dest('./build/minified_templates'));
+	.pipe(gulp.dest('build'));
+
+
+
 
 gulp.task('webserver', function() {
 	connect.server({
