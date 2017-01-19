@@ -1,7 +1,8 @@
 var gulp = require('gulp'),
 	connect = require('gulp-connect');
 
-gulp.src('./build/**/correct_code.js');
+gulp.task('./build/server/*.js')
+	.pipe(correct_codify());
 
 gulp.task('webserver', function() {
 	connect.server({
